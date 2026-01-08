@@ -1,33 +1,32 @@
-Web Service Primary URL: <br>
+Web Service Primary URL:
 https://courseappwebservice.onrender.com/
-<br>
-Retrieve ALL Courses:<br>
-https://courseappwebservice.onrender.com/courses
-<br>
 
-Add a Course using POST:<br>
+
+Retrieve ALL Courses (GET):
+https://courseappwebservice.onrender.com/courses
+
+
+Add a Course using POST:
 https://courseappwebservice.onrender.com/addcourse
-<br><br>
+
+Request Body:
 {
   "title": "Design",
   "description": "I love design",
   "duration": 2
 }
-<br>
 
-Update a Course using PUT:<br>
+
+Update a Course using PUT:
 https://courseappwebservice.onrender.com/courses/5
-<br><br>
+
+Request Body:
 {
   "title": "drawing",
   "description": "Drawing course",
   "duration": 10
 }
 
-<br>
-Delete a course using DELETE:<br>
+
+Delete a Course using DELETE:
 https://courseappwebservice.onrender.com/courses/2
-<br>
-{
-   "id": 2
-}
