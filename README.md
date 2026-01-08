@@ -6,7 +6,7 @@ Retrieve ALL Courses:<br>
 https://courseappwebservice.onrender.com/courses
 <br><br>
 
-Add a Course:<br>
+Add a Course using POST:<br>
 https://courseappwebservice.onrender.com/addcourse
 <br>
 {
@@ -16,7 +16,7 @@ https://courseappwebservice.onrender.com/addcourse
 }
 <br><br>
 
-Update a Course:<br>
+Update a Course using PUT:<br>
 https://courseappwebservice.onrender.com/courses/5
 <br>
 {
