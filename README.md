@@ -8,7 +8,7 @@ https://courseappwebservice.onrender.com/courses
 
 Add a Course:
 https://courseappwebservice.onrender.com/addcourse
-
+<br>
 {
   "title": "Design",
   "description": "I love design",
@@ -18,7 +18,7 @@ https://courseappwebservice.onrender.com/addcourse
 
 Update a Course:
 https://courseappwebservice.onrender.com/courses/5
-
+<br>
 {
   "title": "drawing",
   "description": "Drawing course",
@@ -28,6 +28,7 @@ https://courseappwebservice.onrender.com/courses/5
 <br><br>
 Delete a course using DELETE:
 https://courseappwebservice.onrender.com/courses/2
+<br>
 {
    "id": 2
 }
