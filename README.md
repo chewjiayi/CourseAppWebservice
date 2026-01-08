@@ -25,6 +25,9 @@ https://courseappwebservice.onrender.com/courses/5
   "duration": 10
 }
 
-
+<br><br>
 Delete a course using DELETE:
 https://courseappwebservice.onrender.com/courses/2
+{
+   "id": 2
+}
