@@ -26,7 +26,7 @@ app.get("/courses", async (req, res) => {
 });
 
 // 🔹 ADD a course
-app.post("/courses", async (req, res) => {
+app.post("/addcourse", async (req, res) => {
   const { title, description, duration } = req.body;
 
   try {
