@@ -1,7 +1,7 @@
 Web Service Primary URL: <br>
 https://courseappwebservice.onrender.com/
 
-<br><br>
+<br>
 Retrieve ALL Courses:<br>
 https://courseappwebservice.onrender.com/courses
 <br><br>
