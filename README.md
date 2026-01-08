@@ -1,12 +1,12 @@
-Web Service Primary URL:
+Web Service Primary URL: <br>
 https://courseappwebservice.onrender.com/
 
 <br><br>
-Retrieve ALL Courses:
+Retrieve ALL Courses:<br>
 https://courseappwebservice.onrender.com/courses
 <br><br>
 
-Add a Course:
+Add a Course:<br>
 https://courseappwebservice.onrender.com/addcourse
 <br>
 {
@@ -16,7 +16,7 @@ https://courseappwebservice.onrender.com/addcourse
 }
 <br><br>
 
-Update a Course:
+Update a Course:<br>
 https://courseappwebservice.onrender.com/courses/5
 <br>
 {
@@ -26,7 +26,7 @@ https://courseappwebservice.onrender.com/courses/5
 }
 
 <br><br>
-Delete a course using DELETE:
+Delete a course using DELETE:<br>
 https://courseappwebservice.onrender.com/courses/2
 <br>
 {
