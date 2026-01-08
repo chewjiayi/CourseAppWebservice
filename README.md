@@ -24,8 +24,6 @@ https://courseappwebservice.onrender.com/courses/5
 }
 
 Delete a course using DELETE :
-https://courseappwebservice.onrender.com/courses/5
-
 https://courseappwebservice.onrender.com/courses/2
 
 { 
