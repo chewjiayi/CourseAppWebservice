@@ -5,6 +5,7 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 
+// Database configuration
 const dbConfig = {
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -13,7 +14,9 @@ const dbConfig = {
   port: process.env.DB_PORT,
 };
 
-// 🔹 GET all courses
+// =====================
+// GET all courses
+// =====================
 app.get("/courses", async (req, res) => {
   try {
     const connection = await mysql.createConnection(dbConfig);
@@ -25,9 +28,15 @@ app.get("/courses", async (req, res) => {
   }
 });
 
-// 🔹 ADD a course
+// =====================
+// POST add course
+// =====================
 app.post("/addcourse", async (req, res) => {
   const { title, description, duration } = req.body;
+
+  if (!title || !description || !duration) {
+    return res.status(400).json({ error: "Missing required fields" });
+  }
 
   try {
     const connection = await mysql.createConnection(dbConfig);
@@ -36,13 +45,15 @@ app.post("/addcourse", async (req, res) => {
       [title, description, duration]
     );
     await connection.end();
-    res.json({ message: "Course added" });
+    res.json({ message: "Course added successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-// 🔹 UPDATE a course
+// =====================
+// PUT update course
+// =====================
 app.put("/courses/:id", async (req, res) => {
   const { title, description, duration } = req.body;
   const { id } = req.params;
@@ -54,26 +65,32 @@ app.put("/courses/:id", async (req, res) => {
       [title, description, duration, id]
     );
     await connection.end();
-    res.json({ message: "Course updated" });
+    res.json({ message: "Course updated successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-// 🔹 DELETE a course
+// =====================
+// DELETE course
+// =====================
 app.delete("/courses/:id", async (req, res) => {
   const { id } = req.params;
 
   try {
     const connection = await mysql.createConnection(dbConfig);
-    await connection.execute("DELETE FROM courses WHERE id=?", [id]);
+    await connection.execute(
+      "DELETE FROM courses WHERE id=?",
+      [id]
+    );
     await connection.end();
-    res.json({ message: "Course deleted" });
+    res.json({ message: "Course deleted successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
+// Start server
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
