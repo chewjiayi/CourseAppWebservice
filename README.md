@@ -1,10 +1,9 @@
 Web Service Primary URL: <br>
 https://courseappwebservice.onrender.com/
-
 <br>
-Retrieve ALL Courses:<br><br>
+Retrieve ALL Courses:<br>
 https://courseappwebservice.onrender.com/courses
-<br><br>
+<br>
 
 Add a Course using POST:<br>
 https://courseappwebservice.onrender.com/addcourse
@@ -14,7 +13,7 @@ https://courseappwebservice.onrender.com/addcourse
   "description": "I love design",
   "duration": 2
 }
-<br><br>
+<br>
 
 Update a Course using PUT:<br>
 https://courseappwebservice.onrender.com/courses/5
