@@ -14,9 +14,7 @@ const dbConfig = {
   port: process.env.DB_PORT,
 };
 
-// =====================
-// GET all courses
-// =====================
+
 app.get("/courses", async (req, res) => {
   try {
     const connection = await mysql.createConnection(dbConfig);
@@ -28,9 +26,7 @@ app.get("/courses", async (req, res) => {
   }
 });
 
-// =====================
-// POST add course
-// =====================
+
 app.post("/addcourse", async (req, res) => {
   const { title, description, duration } = req.body;
 
@@ -51,9 +47,7 @@ app.post("/addcourse", async (req, res) => {
   }
 });
 
-// =====================
-// PUT update course
-// =====================
+
 app.put("/courses/:id", async (req, res) => {
   const { title, description, duration } = req.body;
   const { id } = req.params;
@@ -71,9 +65,7 @@ app.put("/courses/:id", async (req, res) => {
   }
 });
 
-// =====================
-// DELETE course
-// =====================
+
 app.delete("/courses/:id", async (req, res) => {
   const { id } = req.params;
 
